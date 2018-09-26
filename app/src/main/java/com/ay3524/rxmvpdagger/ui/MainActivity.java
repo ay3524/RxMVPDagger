@@ -5,7 +5,7 @@ import android.os.Bundle;
 import com.ay3524.rxmvpdagger.R;
 import com.ay3524.rxmvpdagger.base.BaseActivity;
 import com.ay3524.rxmvpdagger.ui.home.HomeFragment;
-import com.ay3524.rxmvpdagger.utils.FragmentTransactionManager;
+import com.ay3524.rxmvpdagger.utils.FragmentTransactionUtil;
 
 public class MainActivity extends BaseActivity {
 
@@ -18,7 +18,7 @@ public class MainActivity extends BaseActivity {
     }
 
     private void launchHome() {
-        FragmentTransactionManager.doContentFragmentTransactionUsingAdd(
+        FragmentTransactionUtil.doContentFragmentTransactionUsingAdd(
                 getSupportFragmentManager(),
                 HomeFragment.newInstance(),
                 false,

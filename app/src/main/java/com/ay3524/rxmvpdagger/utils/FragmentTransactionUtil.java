@@ -7,17 +7,17 @@ import android.support.v4.app.FragmentTransaction;
 import com.ay3524.rxmvpdagger.R;
 import com.ay3524.rxmvpdagger.base.BaseFragment;
 
-public class FragmentTransactionManager {
+public class FragmentTransactionUtil {
 
     private static int animationIn = R.anim.fragment_in;
     private static int animationOut = R.anim.fragment_out;
 
     public static void setTransitionAnimations(int animationIn, int animationOut) {
         if (animationIn != -1) {
-            FragmentTransactionManager.animationIn = animationIn;
+            FragmentTransactionUtil.animationIn = animationIn;
         }
         if (animationOut != -1) {
-            FragmentTransactionManager.animationOut = animationOut;
+            FragmentTransactionUtil.animationOut = animationOut;
         }
     }
 

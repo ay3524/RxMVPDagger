@@ -5,7 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
-import com.ay3524.rxmvpdagger.utils.FragmentTransactionManager;
+import com.ay3524.rxmvpdagger.utils.FragmentTransactionUtil;
 
 public class BaseActivity extends AppCompatActivity {
     private FragmentManager mFragmentManager;
@@ -17,7 +17,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     @Override public void onBackPressed () {
-        Fragment currentFragment = FragmentTransactionManager.getCurrentFragment(mFragmentManager);
+        Fragment currentFragment = FragmentTransactionUtil.getCurrentFragment(mFragmentManager);
         //TODO you can add a home fragment...
 //        if (currentFragment instanceof HomeFragment ) {
 //            finish();

@@ -1,15 +1,28 @@
 package com.ay3524.rxmvpdagger.ui;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.ay3524.rxmvpdagger.R;
+import com.ay3524.rxmvpdagger.base.BaseActivity;
+import com.ay3524.rxmvpdagger.ui.home.HomeFragment;
+import com.ay3524.rxmvpdagger.utils.FragmentTransactionManager;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        launchHome();
+    }
+
+    private void launchHome() {
+        FragmentTransactionManager.doContentFragmentTransactionUsingAdd(
+                getSupportFragmentManager(),
+                HomeFragment.newInstance(),
+                false,
+                R.id.container
+        );
     }
 }

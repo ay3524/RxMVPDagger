@@ -20,7 +20,7 @@ public class BaseActivity extends AppCompatActivity {
         Fragment currentFragment = FragmentTransactionManager.getCurrentFragment(mFragmentManager);
         //TODO you can add a home fragment...
 //        if (currentFragment instanceof HomeFragment ) {
-//            return;
+//            finish();
 //        }
         if (currentFragment instanceof IBackPressInterceptor) {
             ((IBackPressInterceptor) currentFragment).onBackPressed(new IBackPressInterceptor.BackCallback() {

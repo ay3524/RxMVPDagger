@@ -21,8 +21,6 @@ public class FragmentTransactionManager {
         }
     }
 
-    //  public static void
-
     public static synchronized void doContentFragmentTransactionUsingAdd(FragmentManager mFragmentManager, BaseFragment fragment, boolean popStack, int container) {
         if (!mFragmentManager.isDestroyed()) {
             if (popStack) {

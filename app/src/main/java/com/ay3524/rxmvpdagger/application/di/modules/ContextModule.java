@@ -1,8 +1,9 @@
-package com.ay3524.rxmvpdagger.application.di;
+package com.ay3524.rxmvpdagger.application.di.modules;
 
 import android.content.Context;
 
 import com.ay3524.rxmvpdagger.application.MyApplication;
+import com.ay3524.rxmvpdagger.application.di.ApplicationContext;
 
 import dagger.Module;
 import dagger.Provides;

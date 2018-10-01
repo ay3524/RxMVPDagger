@@ -19,7 +19,7 @@ import com.ay3524.rxmvpdagger.ui.home.di.HomeModule;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeFragment extends BaseFragment<MainActivity> {
+public class HomeFragment extends BaseFragment<MainActivity> implements HomeMvpView {
 
     public HomeFragment() {
         // Required empty public constructor

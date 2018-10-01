@@ -1,8 +1,9 @@
 package com.ay3524.rxmvpdagger.base;
 
-public class BasePresenter<V extends MvpView> implements MvpPresenter<V> {
+public class BasePresenter<V extends MvpView, I extends MvpInteractor> implements MvpPresenter<V, I> {
 
     private V mMvpView;
+    private I mMvpInteractor;
 
     @Override
     public void onAttach(V mvpView) {
@@ -12,6 +13,11 @@ public class BasePresenter<V extends MvpView> implements MvpPresenter<V> {
     @Override
     public void onDetach() {
         mMvpView = null;
+    }
+
+    @Override
+    public I getInteractor() {
+        return mMvpInteractor;
     }
 
     public V getMvpView() {

@@ -15,8 +15,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiCallModule {
     @Provides
     @AppScope
-    public ApiEndpoints wooHooApiCall(Retrofit wooHooApiCallRetrofit) {
-        return wooHooApiCallRetrofit.create(ApiEndpoints.class);
+    public ApiEndpoints apiEndpointCall(Retrofit apiEndpointCallRetrofit) {
+        return apiEndpointCallRetrofit.create(ApiEndpoints.class);
     }
 
     @Provides

@@ -4,7 +4,7 @@ import android.content.Context;
 
 import com.ay3524.rxmvpdagger.application.di.AppScope;
 import com.ay3524.rxmvpdagger.application.di.ApplicationContext;
-import com.ay3524.rxmvpdagger.application.di.ContextModule;
+import com.ay3524.rxmvpdagger.application.di.modules.ContextModule;
 import com.jakewharton.picasso.OkHttp3Downloader;
 import com.squareup.picasso.Picasso;
 

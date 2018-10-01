@@ -5,7 +5,7 @@ import android.util.Log;
 
 import com.ay3524.rxmvpdagger.application.di.AppScope;
 import com.ay3524.rxmvpdagger.application.di.ApplicationContext;
-import com.ay3524.rxmvpdagger.application.di.ContextModule;
+import com.ay3524.rxmvpdagger.application.di.modules.ContextModule;
 import com.ay3524.rxmvpdagger.data.prefs.SharedPrefsModule;
 
 import java.io.File;

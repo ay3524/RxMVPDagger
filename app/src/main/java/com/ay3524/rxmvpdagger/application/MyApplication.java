@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 
 import com.ay3524.rxmvpdagger.application.di.AppComponent;
-import com.ay3524.rxmvpdagger.application.di.ContextModule;
+import com.ay3524.rxmvpdagger.application.di.modules.ContextModule;
 import com.ay3524.rxmvpdagger.application.di.DaggerAppComponent;
 import com.ay3524.rxmvpdagger.data.network.ApiEndpoints;
 import com.ay3524.rxmvpdagger.data.prefs.SharedPrefsHelper;

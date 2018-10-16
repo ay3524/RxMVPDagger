@@ -1,11 +1,11 @@
-package com.ay3524.rxmvpdagger.data.prefs;
+package com.ay3524.rxmvpdagger.application.di.modules;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.ay3524.rxmvpdagger.application.di.AppScope;
 import com.ay3524.rxmvpdagger.application.di.ApplicationContext;
-import com.ay3524.rxmvpdagger.application.di.modules.ContextModule;
+import com.ay3524.rxmvpdagger.data.prefs.SharedPrefsHelper;
 
 import dagger.Module;
 import dagger.Provides;
@@ -14,7 +14,7 @@ import dagger.Provides;
  * Created by admin on 2/21/18.
  */
 
-@Module(includes = ContextModule.class)
+@Module(includes = ApplicationModule.class)
 public class SharedPrefsModule {
 
     @Provides

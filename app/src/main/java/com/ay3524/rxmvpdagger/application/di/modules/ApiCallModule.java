@@ -1,6 +1,7 @@
-package com.ay3524.rxmvpdagger.data.network;
+package com.ay3524.rxmvpdagger.application.di.modules;
 
 import com.ay3524.rxmvpdagger.application.di.AppScope;
+import com.ay3524.rxmvpdagger.data.network.ApiEndpoints;
 import com.ay3524.rxmvpdagger.utils.NetworkingConstants;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -32,7 +33,7 @@ public class ApiCallModule {
         return new Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .client(okHttpClient)
-                .baseUrl(NetworkingConstants.BASE_URL)
+                .baseUrl(NetworkingConstants.PIXABAY_BASE_URL)
                 .build();
     }
 }

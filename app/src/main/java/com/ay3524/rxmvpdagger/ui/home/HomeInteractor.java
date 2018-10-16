@@ -4,9 +4,11 @@ import com.ay3524.rxmvpdagger.base.BaseInteractor;
 import com.ay3524.rxmvpdagger.data.network.ApiEndpoints;
 import com.ay3524.rxmvpdagger.data.prefs.SharedPrefsHelper;
 
-public class HomeInteractor extends BaseInteractor {
+public class HomeInteractor extends BaseInteractor implements HomeMvpInteractor {
 
     public HomeInteractor(ApiEndpoints apiHelper, SharedPrefsHelper sharedPrefsHelper) {
         super(apiHelper, sharedPrefsHelper);
     }
+
+
 }

@@ -3,9 +3,9 @@ package com.ay3524.rxmvpdagger.application;
 import android.app.Activity;
 import android.app.Application;
 
-import com.ay3524.rxmvpdagger.application.di.AppComponent;
-import com.ay3524.rxmvpdagger.application.di.modules.ContextModule;
-import com.ay3524.rxmvpdagger.application.di.DaggerAppComponent;
+import com.ay3524.rxmvpdagger.application.di.component.AppComponent;
+import com.ay3524.rxmvpdagger.application.di.component.DaggerAppComponent;
+import com.ay3524.rxmvpdagger.application.di.modules.ApplicationModule;
 import com.ay3524.rxmvpdagger.data.network.ApiEndpoints;
 import com.ay3524.rxmvpdagger.data.prefs.SharedPrefsHelper;
 import com.squareup.picasso.Picasso;
@@ -24,13 +24,33 @@ public class MyApplication extends Application {
     }
 
     private void initializeComponent() {
-        appComponent = DaggerAppComponent
-                .builder()
-                .contextModule(new ContextModule(this))
-                .build();
+
+        appComponent = DaggerAppComponent.builder()
+                .applicationModule(new ApplicationModule(this)).build();
+
+        appComponent.inject(this);
+
         apiEndpoints = appComponent.getWooHooApiCall();
         picasso = appComponent.getPicasso();
         sharedPrefsHelper = appComponent.getSharedPrefsHelper();
+
+        test();
+    }
+
+    private void test() {
+        //FIXME remove later only for testing
+//        Call<Example> call =  apiEndpoints.getUserDetails(NetworkingConstants.API_KEY,"latest");
+//        call.enqueue(new Callback<Example>() {
+//            @Override
+//            public void onResponse(@NonNull Call<Example> call, @NonNull Response<Example> response) {
+//
+//            }
+//
+//            @Override
+//            public void onFailure(@NonNull Call<Example> call, @NonNull Throwable t) {
+//
+//            }
+//        });
     }
 
     public Picasso getPicasso() {

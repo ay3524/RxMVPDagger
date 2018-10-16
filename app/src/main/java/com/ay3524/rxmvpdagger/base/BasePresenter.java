@@ -1,9 +1,16 @@
 package com.ay3524.rxmvpdagger.base;
 
+import javax.inject.Inject;
+
 public class BasePresenter<V extends MvpView, I extends MvpInteractor> implements MvpPresenter<V, I> {
 
     private V mMvpView;
     private I mMvpInteractor;
+
+    @Inject
+    public BasePresenter(I mvpInteractor) {
+        mMvpInteractor = mvpInteractor;
+    }
 
     @Override
     public void onAttach(V mvpView) {

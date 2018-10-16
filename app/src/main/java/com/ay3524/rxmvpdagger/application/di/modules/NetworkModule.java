@@ -1,12 +1,11 @@
-package com.ay3524.rxmvpdagger.data.network;
+package com.ay3524.rxmvpdagger.application.di.modules;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.ay3524.rxmvpdagger.application.di.AppScope;
 import com.ay3524.rxmvpdagger.application.di.ApplicationContext;
-import com.ay3524.rxmvpdagger.application.di.modules.ContextModule;
-import com.ay3524.rxmvpdagger.data.prefs.SharedPrefsModule;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
@@ -22,7 +21,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
  * Created by admin on 1/31/18.
  */
 
-@Module(includes = {ContextModule.class, SharedPrefsModule.class})
+@Module(includes = {ApplicationModule.class, SharedPrefsModule.class})
 public class NetworkModule {
 
     @Provides
@@ -30,7 +29,7 @@ public class NetworkModule {
     public HttpLoggingInterceptor loggingInterceptor() {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {
             @Override
-            public void log(String message) {
+            public void log(@NonNull String message) {
                 Log.e(NetworkModule.class.getSimpleName(), message);
             }
         });

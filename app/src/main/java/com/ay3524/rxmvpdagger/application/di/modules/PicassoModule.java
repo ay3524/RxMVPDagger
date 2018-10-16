@@ -1,10 +1,9 @@
-package com.ay3524.rxmvpdagger.data.network;
+package com.ay3524.rxmvpdagger.application.di.modules;
 
 import android.content.Context;
 
 import com.ay3524.rxmvpdagger.application.di.AppScope;
 import com.ay3524.rxmvpdagger.application.di.ApplicationContext;
-import com.ay3524.rxmvpdagger.application.di.modules.ContextModule;
 import com.jakewharton.picasso.OkHttp3Downloader;
 import com.squareup.picasso.Picasso;
 
@@ -12,7 +11,7 @@ import dagger.Module;
 import dagger.Provides;
 import okhttp3.OkHttpClient;
 
-@Module(includes = {ContextModule.class, NetworkModule.class})
+@Module(includes = {ApplicationModule.class, NetworkModule.class})
 public class PicassoModule {
 
     @Provides
